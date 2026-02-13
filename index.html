@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Suhana 💕</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Quicksand:wght@400;600&family=Pacifico&display=swap" rel="stylesheet">
+
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background: linear-gradient(135deg, #ffafcc, #ffc8dd, #cdb4db);
+  color: #7b2c5b;
+  overflow-x: hidden;
+}
+
+/* Floating Hearts */
+.heart {
+  position: fixed;
+  bottom: -20px;
+  font-size: 18px;
+  animation: floatUp 6s linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-110vh); opacity: 0; }
+}
+
+/* Layout */
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.card {
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 500px;
+  margin: auto;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.counter {
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+/* Buttons */
+button {
+  padding: 12px 22px;
+  border-radius: 25px;
+  border: none;
+  margin: 10px;
+  font-weight: 600;
+  background: #ff69b4;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 15px #ff69b4;
+}
+
+#reason {
+  margin-top: 15px;
+  min-height: 40px;
+  font-weight: 600;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.modal-content {
+  background: #fff0f6;
+  padding: 25px;
+  border-radius: 20px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+}
+
+.close {
+  text-align: right;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 25px 10px;
+  background: rgba(255,255,255,0.6);
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.2rem; }
+  .section { padding: 40px 15px; }
+  .card { padding: 20px; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- Floating Hearts -->
+<script>
+function createHeart() {
+  const heart = document.createElement("div");
+  heart.classList.add("heart");
+  heart.innerHTML = "💗";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.fontSize = (Math.random() * 15 + 12) + "px";
+  document.body.appendChild(heart);
+  setTimeout(() => heart.remove(), 6000);
+}
+setInterval(createHeart, 500);
+</script>
+
+<!-- Hero Section -->
+<div class="section">
+  <div class="card">
+    <h1>Hi Suhana 💕</h1>
+    <p>Welcome to the cutest corner of the internet.</p>
+    <div class="counter">
+      Days since I fell for you: <span id="days"></span> 💖
+    </div>
+  </div>
+</div>
+
+<!-- Reasons Section -->
+<div class="section">
+  <div class="card">
+    <h2>Reasons I Love You 💗</h2>
+    <button onclick="showReason()">Tell me why 😌</button>
+    <p id="reason"></p>
+  </div>
+</div>
+
+<!-- Valentine Section -->
+<div class="section">
+  <div class="card">
+    <h2>Will you be my Valentine? 💘</h2>
+    <button onclick="openModal('yesModal')">YES 💖</button>
+    <button id="noBtn">NO 🥹</button>
+  </div>
+</div>
+
+<!-- Secret Letter -->
+<div class="section">
+  <div class="card">
+    <button onclick="openModal('letterModal')">Open Secret Letter 💌</button>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  Made with too much love by Your Slowest Writer 💕<br>
+  Forever yours, Suhana Mosam 💖
+</footer>
+
+<!-- Modals -->
+
+<div class="modal" id="yesModal">
+  <div class="modal-content">
+    <div class="close" onclick="closeModal('yesModal')">X</div>
+    InshaALLAH jlde chlty hennnnnn 😘
+  </div>
+</div>
+
+<div class="modal" id="letterModal">
+  <div class="modal-content">
+    <div class="close" onclick="closeModal('letterModal')">X</div>
+    <h3>To My Suhana Mosam </h3>
+    <p>
+      From the day I fell for you, everything became softer and brighter.
+      You are my comfort, my chaos, my happiness.
+      <br><br>
+      Suhana, you are my safe place.
+      <br><br>
+      And Khatoon… you are stuck with me forever.
+      <br><br>
+      I love you more than words can explain. Always. 💖
+    </p>
+  </div>
+</div>
+
+<script>
+
+/* Days Counter */
+const startDate = new Date("2022-04-28"); // CHANGE DATE
+const today = new Date();
+const diffDays = Math.floor((today - startDate) / (1000*60*60*24));
+document.getElementById("days").innerText = diffDays;
+
+/* Love Reasons */
+const reasons = [
+  "Because your smile fixes my whole day",
+  "Because you’re dramatic in the cutest way",
+  "Because you chose me 🥹",
+  "Because you are my safe place",
+  "Because you are my mine forever",
+  "Because you are my pasandeeda aurat"
+];
+
+function showReason() {
+  const random = reasons[Math.floor(Math.random() * reasons.length)];
+  document.getElementById("reason").innerText = random;
+}
+
+/* Mobile Friendly Moving NO Button */
+const noBtn = document.getElementById("noBtn");
+
+function moveButton() {
+  noBtn.style.position = "relative";
+  noBtn.style.left = Math.random() * 100 - 50 + "px";
+  noBtn.style.top = Math.random() * 30 - 15 + "px";
+}
+
+noBtn.addEventListener("mouseenter", moveButton);
+noBtn.addEventListener("click", moveButton); // works on phone tap
+
+/* Modal Functions */
+function openModal(id) {
+  document.getElementById(id).style.display = "flex";
+}
+
+function closeModal(id) {
+  document.getElementById(id).style.display = "none";
+}
+
+</script>
+
+</body>
+</html>
